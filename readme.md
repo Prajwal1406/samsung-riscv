@@ -123,3 +123,95 @@ Below is the breakdown of each instruction:
 - **Opcode**: `1100111`
 - **Immediate**: `0`
 - **Binary Representation**: `00000000000000001011000111001111`
+
+### task4
+
+# RISC-V Instructions
+
+This repository contains a set of RISC-V instructions along with their standard and hardcoded 32-bit instruction codes, as well as detailed explanations and examples.
+
+## Instructions
+
+### 1. ADD R6, R2, R1
+
+- **Operation**: Adds the values in registers R2 and R1, and stores the result in register R6.
+- **Example**: If R2 = 5 and R1 = 3, then R6 = 5 + 3 = 8.
+- **Standard 32-bit Code**: `32'h00110333`
+- **Hardcoded 32-bit Code**: `32'h02208300`
+
+### 2. SUB R7, R1, R2
+
+- **Operation**: Subtracts the value in register R2 from the value in register R1, and stores the result in register R7.
+- **Example**: If R1 = 10 and R2 = 4, then R7 = 10 - 4 = 6.
+- **Standard 32-bit Code**: `32'h402083b3`
+- **Hardcoded 32-bit Code**: `32'h02209380`
+
+### 3. AND R8, R1, R3
+
+- **Operation**: Performs a bitwise AND operation on the values in registers R1 and R3, and stores the result in register R8.
+- **Example**: If R1 = 6 (binary 110) and R3 = 3 (binary 011), then R8 = 2 (binary 010).
+- **Standard 32-bit Code**: `32'h0030f433`
+- **Hardcoded 32-bit Code**: `32'h0230a400`
+
+### 4. OR R9, R2, R5
+
+- **Operation**: Performs a bitwise OR operation on the values in registers R2 and R5, and stores the result in register R9.
+- **Example**: If R2 = 6 (binary 110) and R5 = 3 (binary 011), then R9 = 7 (binary 111).
+- **Standard 32-bit Code**: `32'h005164b3`
+- **Hardcoded 32-bit Code**: `32'h02513480`
+
+### 5. XOR R10, R1, R4
+
+- **Operation**: Performs a bitwise XOR operation on the values in registers R1 and R4, and stores the result in register R10.
+- **Example**: If R1 = 6 (binary 110) and R4 = 3 (binary 011), then R10 = 5 (binary 101).
+- **Standard 32-bit Code**: `32'h0040c533`
+- **Hardcoded 32-bit Code**: `32'h0240c500`
+
+### 6. SLT R1, R2, R4
+
+- **Operation**: Sets register R1 to 1 if the value in register R2 is less than the value in register R4, otherwise sets it to 0.
+- **Example**: If R2 = 3 and R4 = 5, then R1 = 1.
+- **Standard 32-bit Code**: `32'h0045a0b3`
+- **Hardcoded 32-bit Code**: `32'h02415580`
+
+### 7. ADDI R12, R4, 5
+
+- **Operation**: Adds the immediate value 5 to the value in register R4, and stores the result in register R12.
+- **Example**: If R4 = 7, then R12 = 7 + 5 = 12.
+- **Standard 32-bit Code**: `32'h004120b3`
+- **Hardcoded 32-bit Code**: `32'h00520600`
+
+### 8. BEQ R0, R0, 15
+
+- **Operation**: Branches to the address 15 instructions ahead if the values in registers R0 and R0 are equal. Since R0 is always zero, this condition is always true.
+- **Example**: The program counter will jump to the address 15 instructions ahead.
+- **Standard 32-bit Code**: `32'h00000f63`
+- **Hardcoded 32-bit Code**: `32'h00f00002`
+
+### 9. SW R3, R1, 2
+
+- **Operation**: Stores the value in register R3 into the memory address calculated by adding the value in register R1 and the offset 2.
+- **Example**: If R3 = 10 and R1 = 100, the value 10 will be stored at the memory address 102.
+- **Standard 32-bit Code**: `32'h0030a123`
+- **Hardcoded 32-bit Code**: `32'h00209181`
+
+### 10. LW R13, R1, 2
+
+- **Operation**: Loads a 32-bit word from the memory address calculated by adding the value in register R1 and the offset 2, and stores it in register R13.
+- **Example**: If the memory address 102 contains the value 20 and R1 = 100, then R13 = 20.
+- **Standard 32-bit Code**: `32'h0020a683`
+- **Hardcoded 32-bit Code**: `32'h00208681`
+
+### 11. SRL R16, R14, R2
+
+- **Operation**: Performs a logical right shift on the value in register R14 by the number of positions specified in register R2, and stores the result in register R16.
+- **Example**: If R14 = 16 (binary 10000) and R2 = 2, then R16 = 4 (binary 100).
+- **Standard 32-bit Code**: `32'h0030a123`
+- **Hardcoded 32-bit Code**: `32'h00271803`
+
+### 12. SLL R15, R1, R2
+
+- **Operation**: Performs a logical left shift on the value in register R1 by the number of positions specified in register R2, and stores the result in register R15.
+- **Example**: If R1 = 3 (binary 11) and R2 = 2, then R15 = 12 (binary 1100).
+- **Standard 32-bit Code**: `32'h002097b3`
+- **Hardcoded 32-bit Code**: `32'h00208783`
