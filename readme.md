@@ -133,20 +133,22 @@ This repository contains a set of RISC-V instructions along with their standard 
 ## Instructions
 
 ### 1. ADD R6, R2, R1
-
+![add](https://github.com/user-attachments/assets/5f677392-126e-41af-b13d-0a70339c7a53)
 - **Operation**: Adds the values in registers R2 and R1, and stores the result in register R6.
 - **Example**: If R2 = 5 and R1 = 3, then R6 = 5 + 3 = 8.
 - **Standard 32-bit Code**: `32'h00110333`
 - **Hardcoded 32-bit Code**: `32'h02208300`
 
-### 2. SUB R7, R1, R2
 
+### 2. SUB R7, R1, R2
+![sub](https://github.com/user-attachments/assets/9c728aa1-0090-473a-b432-e0f98edd37c9)
 - **Operation**: Subtracts the value in register R2 from the value in register R1, and stores the result in register R7.
 - **Example**: If R1 = 10 and R2 = 4, then R7 = 10 - 4 = 6.
 - **Standard 32-bit Code**: `32'h402083b3`
 - **Hardcoded 32-bit Code**: `32'h02209380`
 
 ### 3. AND R8, R1, R3
+![and](https://github.com/user-attachments/assets/5098428d-4e82-424f-912b-338511621b31)
 
 - **Operation**: Performs a bitwise AND operation on the values in registers R1 and R3, and stores the result in register R8.
 - **Example**: If R1 = 6 (binary 110) and R3 = 3 (binary 011), then R8 = 2 (binary 010).
@@ -154,6 +156,7 @@ This repository contains a set of RISC-V instructions along with their standard 
 - **Hardcoded 32-bit Code**: `32'h0230a400`
 
 ### 4. OR R9, R2, R5
+![or](https://github.com/user-attachments/assets/39283bf6-4237-4be8-8db7-777d84b65c01)
 
 - **Operation**: Performs a bitwise OR operation on the values in registers R2 and R5, and stores the result in register R9.
 - **Example**: If R2 = 6 (binary 110) and R5 = 3 (binary 011), then R9 = 7 (binary 111).
@@ -161,6 +164,7 @@ This repository contains a set of RISC-V instructions along with their standard 
 - **Hardcoded 32-bit Code**: `32'h02513480`
 
 ### 5. XOR R10, R1, R4
+![xor](https://github.com/user-attachments/assets/e4f2d322-7dac-4fbb-af3b-2de901a57581)
 
 - **Operation**: Performs a bitwise XOR operation on the values in registers R1 and R4, and stores the result in register R10.
 - **Example**: If R1 = 6 (binary 110) and R4 = 3 (binary 011), then R10 = 5 (binary 101).
@@ -168,6 +172,7 @@ This repository contains a set of RISC-V instructions along with their standard 
 - **Hardcoded 32-bit Code**: `32'h0240c500`
 
 ### 6. SLT R1, R2, R4
+![slt](https://github.com/user-attachments/assets/505e33af-e29b-4829-ad28-7111e9026bb2)
 
 - **Operation**: Sets register R1 to 1 if the value in register R2 is less than the value in register R4, otherwise sets it to 0.
 - **Example**: If R2 = 3 and R4 = 5, then R1 = 1.
@@ -175,6 +180,7 @@ This repository contains a set of RISC-V instructions along with their standard 
 - **Hardcoded 32-bit Code**: `32'h02415580`
 
 ### 7. ADDI R12, R4, 5
+![addi](https://github.com/user-attachments/assets/aa5d5104-f12a-4809-88de-1ccd50146e24)
 
 - **Operation**: Adds the immediate value 5 to the value in register R4, and stores the result in register R12.
 - **Example**: If R4 = 7, then R12 = 7 + 5 = 12.
@@ -182,6 +188,7 @@ This repository contains a set of RISC-V instructions along with their standard 
 - **Hardcoded 32-bit Code**: `32'h00520600`
 
 ### 8. BEQ R0, R0, 15
+![beq](https://github.com/user-attachments/assets/a00bc9e6-31d4-42f2-a451-0ee400da9afc)
 
 - **Operation**: Branches to the address 15 instructions ahead if the values in registers R0 and R0 are equal. Since R0 is always zero, this condition is always true.
 - **Example**: The program counter will jump to the address 15 instructions ahead.
@@ -196,6 +203,7 @@ This repository contains a set of RISC-V instructions along with their standard 
 - **Hardcoded 32-bit Code**: `32'h00209181`
 
 ### 10. LW R13, R1, 2
+![loadingword](https://github.com/user-attachments/assets/af8ebc93-d1d2-4010-a87a-8b66f93feaee)
 
 - **Operation**: Loads a 32-bit word from the memory address calculated by adding the value in register R1 and the offset 2, and stores it in register R13.
 - **Example**: If the memory address 102 contains the value 20 and R1 = 100, then R13 = 20.
